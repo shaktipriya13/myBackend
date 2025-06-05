@@ -1,10 +1,3 @@
-// const errorHandler = (err, req, res, next) => {
-//     console.error(err.stack);
-//     res.status(500).json({ error: 'Something went wrong!' });
-//   };
-
-//   export default errorHandler;
-
 
 const errorHandler = (err, req, res, next) => {
   console.error('❌ Error Stack:', err.stack); // full stack in server logs

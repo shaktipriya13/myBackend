@@ -1,32 +1,4 @@
-//* working below was best
-// import express from 'express';
-// import authRoutes from './routes/auth.routes.js';
-// import dotenv from 'dotenv';
-// import connectDB from './config/db.js';
-// import chapterRoutes from './routes/chapter.routes.js';
-// import { rateLimit } from './middlewares/rateLimiter.js';
-// import errorHandler from './middlewares/errorHandler.js';
-// import { config } from './config/config.js'
 
-// dotenv.config();
-// const app = express();
-
-// // Connect to MongoDB
-// connectDB();
-
-// app.use(express.json());
-// app.use(rateLimit); // Apply rate limiting globally to all routes
-// app.use('/api/v1/chapters', chapterRoutes);
-// app.use('/api/v1/auth', authRoutes);
-
-// // Global error handler
-// app.use(errorHandler);
-
-// app.listen(config.port, () => {
-//     console.log(`Server running on port ${config.port}`);
-// });
-
-//! tikh ha
 import express from 'express';
 import authRoutes from './routes/auth.routes.js';
 import dotenv from 'dotenv';

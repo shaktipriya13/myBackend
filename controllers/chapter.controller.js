@@ -4,54 +4,7 @@ import { cacheData, getCachedData, invalidateCache } from '../utils/cache.js';
 
 import fs from 'fs/promises';
 
-// Get all chapters with filtering and pagination
-// export const getChapters = async (req, res, next) => {
-//     try {
-//         const { class: classFilter, unit, status, isWeakChapter, subject, page = 1, limit = 10 } = req.query;
-//         const cacheKey = `chapters:${JSON.stringify(req.query)}`;
 
-//         // Check cache
-//         const cached = await getCachedData(cacheKey);
-//         if (cached) {
-//             return res.json(cached);
-//         }
-
-//         // Build query
-//         const query = {};
-//         if (classFilter) query.class = classFilter;
-//         if (unit) query.unit = unit;
-//         if (status) query.status = status;
-//         if (isWeakChapter) query.isWeakChapter = isWeakChapter === 'true';
-//         if (subject) query.subject = subject;
-
-//         // Pagination
-//         const pageNum = parseInt(page, 10);
-//         const limitNum = parseInt(limit, 10);
-//         const skip = (pageNum - 1) * limitNum;
-
-//         // Fetch chapters
-//         const chapters = await Chapter.find(query)
-//             .skip(skip)
-//             .limit(limitNum)
-//             .lean();
-
-//         const total = await Chapter.countDocuments(query);
-
-//         const response = {
-//             total,
-//             page: pageNum,
-//             limit: limitNum,
-//             chapters,
-//         };
-
-//         // Cache results
-//         await cacheData(cacheKey, response, 3600);
-
-//         res.json(response);
-//     } catch (error) {
-//         next(error);
-//     }
-// };
 
 export const getChapters = async (req, res, next) => {
     try {
