@@ -1,4 +1,13 @@
+
 # Chapter Performance API
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=white)
+[![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)](https://redis.io/)
+[![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/)
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-0078D4?style=flat-square&logo=github-actions&logoColor=white)](https://docs.github.com/en/actions)
+[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/features/actions)
 
 A RESTful API for managing chapters and batches in a performance dashboard, built with Node.js, Express, MongoDB, and Redis. This API supports chapter management with filtering, pagination, caching, and secure file uploads, as well as batch operations for grouping chapters.
 
@@ -24,35 +33,34 @@ A RESTful API for managing chapters and batches in a performance dashboard, buil
 ## Project Structure
 
 ```
-math/
-├── src/
-│   ├── config/
-│   │   ├── config.js
-│   │   ├── db.js
-│   │   └── redisClient.js
-│   ├── controllers/
-│   │   ├── authController.js    # New
-│   │   └── chapterController.js
-│   ├── middleware/
-│   │   ├── auth.js
-│   │   ├── rateLimit.js
-│   │   └── errorHandler.js
-│   ├── models/
-│   │   ├── Chapter.js
-│   │   └── User.js             # New
-│   ├── routes/
-│   │   ├── authRoutes.js       # New
-│   │   └── chapterRoutes.js
-│   ├── utils/
-│   │   └── cache.js
-│   └── index.js
-├── test-data/
-│   └── chapters.json
-├── .env
-├── .gitignore
-├── package.json
-├── README.md
-├── postman_collection.json
+chapter-performance-api/
+├── config/                 # Configuration files (e.g., database, Redis)
+│   ├── db.js
+│   ├── redis.js
+│   └── config.js
+├── controllers/            # Logic for handling API requests
+│   ├── chapterController.js
+│   └── batchController.js
+├── middlewares/            # Custom middleware (e.g., authentication, rate-limiting)
+│   ├── auth.js
+│   ├── errorHandler.js
+│   └── rateLimiter.js
+├── models/                 # Database schemas
+│   ├── Chapter.js
+│   └── Batch.js
+├── routes/                 # API routes
+│   ├── chapterRoutes.js
+│   └── batchRoutes.js
+├── utils/                  # Helper functions (e.g., caching, file parsing)
+│   ├── cache.js
+│   └── fileParser.js
+├── .env                    # Environment variables (sensitive info)
+├── .gitignore              # Files to ignore in Git
+├── package.json            # Project metadata and dependencies
+├── server.js               # Main entry point for the app
+├── README.md               # Project documentation
+└── .github/workflows/      # GitHub Actions for deployment
+    └── deploy.yml
 ```
 
 ## Setup
@@ -138,16 +146,3 @@ math/
 - **File Uploads** : Multer
 - **Deployment** : Render/Railway/Fly.io, AWS EC2 (optional)
 - **CI/CD** : GitHub Actions
-
----
-
-by default cjs is used
-
-| Feature           | CommonJS (CJS)               | ES Modules (ESM)                                       |
-| ----------------- | ---------------------------- | ------------------------------------------------------ |
-| File extension    | `.js`(default in Node.js)    | `.mjs`or `.js`with `"type": "module"`in `package.json` |
-| Export syntax     | `module.exports`or `exports` | `export`,`export default`                              |
-| Import syntax     | `require()`                  | `import`                                               |
-| Synchronous       | ✅ Yes                       | ❌ No (import is async)                                |
-| Works in Node.js  | ✅ Native                    | ✅ (with config)                                       |
-| Works in browsers | ❌ No (needs bundling)       | ✅ Yes (modern browsers)                               |
