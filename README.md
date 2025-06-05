@@ -113,16 +113,15 @@ chapter-performance-api/
 
   - Query Parameters: `name`, `status`, `page`, `limit`
   - Returns: Paginated list of chapters
-
 - **GET /api/v1/chapters/:id**
 
   - Returns: Single batch by ID
-
 - **POST /api/v1/chapters**
 
   - Body: `{ name, status, chapters: [chapterIds] }`
   - Headers: `Authorization: Bearer <admin-token>`
   - Returns: Created batch
+
 
 ## 🧪 Testing
 
@@ -143,15 +142,16 @@ chapter-performance-api/
 
 Create a Postman environment with the following variables:
 
-| Variable      | Example Value / Description                                 |
-| ------------- | ----------------------------------------------------------- |
+| Variable        | Example Value / Description                                   |
+| --------------- | ------------------------------------------------------------- |
 | `base_url`    | `https://chapter-performance-api-shakti-priya.onrender.com` |
-| `admin_token` | Obtain from `/api/v1/auth/login`                            |
+| `admin_token` | Obtain from `/api/v1/auth/login`                           |
 | `chapter_id`  | Use a valid ID from `GET /api/v1/chapters` response         |
+
 
 ## Deployment
 
-- **PlatformEnvironment Setup:** : Deployed on Render at [link].
+- **PlatformEnvironment Setup:** : Deployed on Render at [[link].](https://chapter-performance-api-shakti-priya.onrender.com/)
 - **CI/CD** : Automated deployment using GitHub Actions (see `.github/workflows/deploy.yml`).
 - **Optional** : Deployed on AWS EC2 for scalability.
 
