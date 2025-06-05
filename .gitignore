@@ -79,7 +79,7 @@ pids/
 coverage/
 jest-cache/
 jest-debug.log
-
+scripts
 # Optional npm/yarn/lock files
 
 yarn.lock

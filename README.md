@@ -1,4 +1,3 @@
-
 # Chapter Performance API
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
@@ -123,8 +122,8 @@ chapter-performance-api/
 ## Testing
 
 - **Local Testing** : Use Postman to test endpoints.
-- **Public Postman Collection** : [Link to your Postman collection]
-- **Deployed API** : [Link to your deployed API]
+- **Public Postman Collection** : [https://www.postman.com/shakti-priya/mathongo-api/collection/ffg7utw/mathongo-chapter-performance-dashboard-api?action=share&amp;creator=37155607](https://www.postman.com/shakti-priya/mathongo-api/collection/ffg7utw/mathongo-chapter-performance-dashboard-api?action=share&creator=37155607)
+- **Deployed API** : [https://chapter-performance-api-shakti-priya.onrender.com/](https://chapter-performance-api-shakti-priya.onrender.com/)
 
 ## Deployment
 
