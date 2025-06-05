@@ -1,9 +1,10 @@
+
 **📝 Assignment Details**
 
-- **Received On:** Tuesday, 3rd June 2025 at 7:13 PM
-- **Submitted On:** Thursday, 6th June 2025 at 3:30 AM
+* **Received On:** Tuesday, 3rd June 2025 at 7:13 PM
+* **Submitted On:** Thursday, 6th June 2025 at 3:30 AM
 
-# Chapter Performance API
+# Chapter Performance API 
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
@@ -69,7 +70,6 @@ chapter-performance-api/
    git clone https://github.com/priyashakti68/chapter-performance-api.git
    cd chapter-performance-api
    ```
-
 2. Install dependencies
 
 ```bash
@@ -86,7 +86,6 @@ chapter-performance-api/
    PORT=8000
    JWT_SECRET=<your-jwt-secret>
    ```
-
 4. **Start the server**:
 
    ```bash
@@ -139,7 +138,6 @@ chapter-performance-api/
     ```
     { "error": "Invalid class value" }
     ```
-
 - **GET /api/v1/chapters/:id**
 
   - Example: `/api/v1/chapters/1`
@@ -161,7 +159,6 @@ chapter-performance-api/
     ```
     { "error": "Chapter not found" }
     ```
-
 - **POST /api/v1/chapters**
 
   - Body: `multipart/form-data` (key: `file`, value: JSON file)
@@ -210,22 +207,23 @@ chapter-performance-api/
 
 ### 🔹 Public Postman Collection
 
-- Access the well-documented collection here: [Mathongo Chapter Performance Dashboard API](https://www.postman.com/shakti-priya/mathongo/collection/ffg7utw/mathongo-chapter-performance-dashboard-api?action=share&creator=37155607)
+- Access the well-documented collection here: [Mathongo Chapter Performance Dashboard API](https://www.postman.com/shakti-priya/mathongo-api/collection/ffg7utw/mathongo-chapter-performance-dashboard-api?action=share&creator=37155607)
 
 ### 🔹 Deployed API
 
-- Base URL: [https://chapter-performance-api-shakti-priya.onrender.com/](http://13.60.25.23:8000/api/v1/chapters) _(Updated to EC2 URL since Render link seems placeholder)_
+- Render Base URL: [https://chapter-performance-api-shakti-priya.onrender.com/](https://chapter-performance-api-shakti-priya.onrender.com/)
+- EC2 deployed url: [http://13.60.25.23:8000/api/v1/](http://13.60.25.23:8000/api/v1)
 
 ### 🔹 Postman Environment Setup
 
 Create a Postman environment with the following variables:
 
-| Variable      | Example Value / Description                                 |
-| ------------- | ----------------------------------------------------------- |
-| `render_url`  | https://chapter-performance-api-shakti-priya.onrender.com/  |
+| Variable        | Example Value / Description                                     |
+| --------------- | --------------------------------------------------------------- |
+| `render_url`  | https://chapter-performance-api-shakti-priya.onrender.com/      |
 | `admin_token` | Obtain from `/api/v1/auth/register` or `/api/v1/auth/login` |
-| `chapter_id`  | Use a valid ID from `GET /api/v1/chapters` response         |
-| ec2 url       | `http://13.60.25.23:8000/api/v1`                            |
+| `chapter_id`  | Use a valid ID from `GET /api/v1/chapters` response           |
+| ec2 url         | `http://13.60.25.23:8000/api/v1`                              |
 
 ### 🔹 Testing Caching
 
@@ -247,7 +245,7 @@ Create a Postman environment with the following variables:
 
 ### Render Deployment
 
-- **Platform**: Deployed on Render at [https://chapter-performance-api-shakti-priya.onrender.com/](http://example.com) _(Placeholder link—replace with actual if applicable)_.
+- **Platform**: Deployed on Render at [https://chapter-performance-api-shakti-priya.onrender.com/](https://chapter-performance-api-shakti-priya.onrender.com/) _(Placeholder link—replace with actual if applicable)_.
 - **Cost**: Free tier used, no cost incurred.
 - **Setup**: Configured environment variables in Render dashboard, deployed via GitHub integration.
 
@@ -299,12 +297,10 @@ Create a Postman environment with the following variables:
 ## Screenshots
 
 - **API Response**:
-
   - **ADMIN LOGIN: For uploading chapters, admin login is mandatory with shown credentials in the image.**
   - POST: {{baseUrl}}/api/v1/auth/login:
 
     ![1749159942868](image/rd/1749159942868.png)
-
   - **GET**: {{baseUrl}}api/v1/chapters?class=Class 12&subject=Mathematics&status=Completed&isWeakChapter=false&limit=5
     ![1749160020533](image/rd/1749160020533.png)
   - **GET chapter by ID**: {{baseUrl}}api/v1/chapters/6840bd081e9210ddccf15abc
@@ -312,7 +308,6 @@ Create a Postman environment with the following variables:
   - **UPLOAD CHAPTERS:**
     POST {{baseUrl}}api/v1/chapters/:
     ![1749160115306](image/rd/1749160115306.png)
-
 - **Rate Limiting**:
   ![1749160167907](image/rd/1749160167907.png)
 - REDIS Insigt: Cached data -
