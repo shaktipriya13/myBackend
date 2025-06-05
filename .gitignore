@@ -93,3 +93,4 @@ api-docs/
 # Uploads (if using file uploads like multer)
 uploads/
 public/uploads/
+rd.md
