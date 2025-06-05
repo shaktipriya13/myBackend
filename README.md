@@ -110,24 +110,48 @@ chapter-performance-api/
 ### chapters
 
 - **GET /api/v1/chapters**
+
   - Query Parameters: `name`, `status`, `page`, `limit`
   - Returns: Paginated list of chapters
+
 - **GET /api/v1/chapters/:id**
+
   - Returns: Single batch by ID
+
 - **POST /api/v1/chapters**
+
   - Body: `{ name, status, chapters: [chapterIds] }`
   - Headers: `Authorization: Bearer <admin-token>`
   - Returns: Created batch
 
-## Testing
+## 🧪 Testing
 
-- **Local Testing** : Use Postman to test endpoints.
-- **Public Postman Collection** : [https://www.postman.com/shakti-priya/mathongo-api/collection/ffg7utw/mathongo-chapter-performance-dashboard-api?action=share&amp;creator=37155607](https://www.postman.com/shakti-priya/mathongo-api/collection/ffg7utw/mathongo-chapter-performance-dashboard-api?action=share&creator=37155607)
-- **Deployed API** : [https://chapter-performance-api-shakti-priya.onrender.com/](https://chapter-performance-api-shakti-priya.onrender.com/)
+### 🔹 Local Testing
+
+- Use **Postman** to test the API endpoints locally.
+
+### 🔹 Public Postman Collection
+
+- Access the public collection here:
+  [Mathongo Chapter Performance Dashboard API](https://www.postman.com/shakti-priya/mathongo-api/collection/ffg7utw/mathongo-chapter-performance-dashboard-api?action=share&creator=37155607)
+
+### 🔹 Deployed API
+
+- Base URL: [https://chapter-performance-api-shakti-priya.onrender.com/](https://chapter-performance-api-shakti-priya.onrender.com/)
+
+### 🔹 Postman Environment Setup
+
+Create a Postman environment with the following variables:
+
+| Variable      | Example Value / Description                                 |
+| ------------- | ----------------------------------------------------------- |
+| `base_url`    | `https://chapter-performance-api-shakti-priya.onrender.com` |
+| `admin_token` | Obtain from `/api/v1/auth/login`                            |
+| `chapter_id`  | Use a valid ID from `GET /api/v1/chapters` response         |
 
 ## Deployment
 
-- **Platform** : Deployed on Render at [link].
+- **PlatformEnvironment Setup:** : Deployed on Render at [link].
 - **CI/CD** : Automated deployment using GitHub Actions (see `.github/workflows/deploy.yml`).
 - **Optional** : Deployed on AWS EC2 for scalability.
 
