@@ -36,26 +36,29 @@ A RESTful API for managing chapters in a performance dashboard, built with Node.
 chapter-performance-api/
 ├── config/                 # Configuration files (e.g., database, Redis)
 │   ├── db.js
-│   ├── redis.js
+│   ├── redisClient.js
 │   └── config.js
 ├── controllers/            # Logic for handling API requests
-│   ├── chapterController.js
+│   ├── auth.controller.js
+    ├── chapter.controller.js
 ├── middlewares/            # Custom middleware (e.g., authentication, rate-limiting)
 │   ├── auth.js
 │   ├── errorHandler.js
 │   └── rateLimiter.js
 ├── models/                 # Database schemas
-│   ├── Chapter.js
+│   ├── Chapter.model.js
+    ├── User.model.js
 ├── routes/                 # API routes
-│   ├── chapterRoutes.js
+│   ├── auth.routes.js
+    ├── chapter.routes.js
 ├── utils/                  # Helper functions (e.g., caching, file parsing)
 │   ├── cache.js
-│   └── fileParser.js
 ├── .env                    # Environment variables (sensitive info)
 ├── .gitignore              # Files to ignore in Git
 ├── package.json            # Project metadata and dependencies
 ├── server.js               # Main entry point for the app
 ├── README.md               # Project documentation
+├── Procfile 		    # for render deployment
 └── .github/workflows/      # GitHub Actions for deployment
     └── deploy.yml
 ```
