@@ -10,7 +10,7 @@
 [![CI/CD](https://img.shields.io/badge/CI%2FCD-0078D4?style=flat-square&logo=github-actions&logoColor=white)](https://docs.github.com/en/actions)
 [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/features/actions)
 
-A RESTful API for managing chapters and batches in a performance dashboard, built with Node.js, Express, MongoDB, and Redis. This API supports chapter management with filtering, pagination, caching, and secure file uploads, as well as batch operations for grouping chapters.
+A RESTful API for managing chapters and chapters in a performance dashboard, built with Node.js, Express, MongoDB, and Redis. This API supports chapter management with filtering, pagination, caching, and secure file uploads, as well as batch operations for grouping chapters.
 
 ## Features
 
@@ -19,12 +19,12 @@ A RESTful API for managing chapters and batches in a performance dashboard, buil
 - `GET /api/v1/chapters/:id`: Get a single chapter by ID.
 - `POST /api/v1/chapters`: Upload a JSON file to add chapters (admin-only).
 - **Batch Endpoints** :
-- `GET /api/v1/batches`: Retrieve batches with filters (name, status) and pagination.
-- `GET /api/v1/batches/:id`: Get a single batch by ID.
-- `POST /api/v1/batches`: Create a new batch (admin-only).
-- `PUT /api/v1/batches/:id`: Update an existing batch (admin-only).
-- `DELETE /api/v1/batches/:id`: Delete a batch (admin-only).
-- **Caching** : Redis caching for `GET /api/v1/chapters` and `GET /api/v1/batches` (1-hour TTL).
+- `GET /api/v1/chapters`: Retrieve chapters with filters (name, status) and pagination.
+- `GET /api/v1/chapters/:id`: Get a single batch by ID.
+- `POST /api/v1/chapters`: Create a new batch (admin-only).
+- `PUT /api/v1/chapters/:id`: Update an existing batch (admin-only).
+- `DELETE /api/v1/chapters/:id`: Delete a batch (admin-only).
+- **Caching** : Redis caching for `GET /api/v1/chapters` and `GET /api/v1/chapters` (1-hour TTL).
 - **Rate-Limiting** : 30 requests per minute per IP.
 - **Authentication** : Admin-only endpoints secured with token-based authentication.
 - **File Uploads** : JSON file uploads for chapters using Multer.
@@ -85,8 +85,8 @@ chapter-performance-api/
    REDIS_HOST=<your-redis-host>
    REDIS_PORT=<your-redis-port>
    REDIS_PASSWORD=<your-redis-password>
-   PORT=3000
-   ADMIN_TOKEN=<your-admin-token>
+   PORT=8000
+   JWT_SECRET=<your-jwt-secret>
    ```
 2. **Start the server** :
 
@@ -108,24 +108,17 @@ chapter-performance-api/
   - Headers: `Authorization: Bearer <admin-token>`
   - Returns: Success message and added chapters
 
-### Batches
+### chapters
 
-- **GET /api/v1/batches**
+- **GET /api/v1/chapters**
   - Query Parameters: `name`, `status`, `page`, `limit`
-  - Returns: Paginated list of batches
-- **GET /api/v1/batches/:id**
+  - Returns: Paginated list of chapters
+- **GET /api/v1/chapters/:id**
   - Returns: Single batch by ID
-- **POST /api/v1/batches**
+- **POST /api/v1/chapters**
   - Body: `{ name, status, chapters: [chapterIds] }`
   - Headers: `Authorization: Bearer <admin-token>`
   - Returns: Created batch
-- **PUT /api/v1/batches/:id**
-  - Body: `{ name, status, chapters: [chapterIds] }`
-  - Headers: `Authorization: Bearer <admin-token>`
-  - Returns: Updated batch
-- **DELETE /api/v1/batches/:id**
-  - Headers: `Authorization: Bearer <admin-token>`
-  - Returns: Success message
 
 ## Testing
 
@@ -135,7 +128,7 @@ chapter-performance-api/
 
 ## Deployment
 
-- **Platform** : Deployed on [Render/Railway/Fly.io].
+- **Platform** : Deployed on Render at [link].
 - **CI/CD** : Automated deployment using GitHub Actions (see `.github/workflows/deploy.yml`).
 - **Optional** : Deployed on AWS EC2 for scalability.
 
