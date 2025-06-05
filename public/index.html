@@ -2,42 +2,125 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chapter Performance API</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        h1 {
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: #333;
         }
 
+        .container {
+            background-color: #ffffff;
+            padding: 50px 60px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 650px;
+            width: 100%;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
         p {
-            color: #666;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 20px;
         }
 
         a {
-            color: #007bff;
+            display: inline-block;
+            color: #2575fc;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         a:hover {
+            color: #1a5ad9;
             text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.95rem;
+            color: #777;
+        }
+
+        .profile-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .github-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            color: white;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            font-size: 14px;
+            font-family: monospace;
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>Chapter Performance API</h1>
-    <p>Welcome to the Chapter Performance Dashboard API!</p>
-    <p>This is a RESTful API for managing chapters, built with Node.js, Express, MongoDB, and Redis.</p>
-    <p>Check out the <a href="YOUR_POSTMAN_COLLECTION_LINK">API documentation</a> for endpoint details.</p>
-    <p>Developed by Shakti Priya</p>
+    <div class="container">
+        <h1>Chapter Performance API</h1>
+        <p>Welcome to the Chapter Performance Dashboard API!</p>
+        <p>This is a RESTful API for managing chapters, built with <strong>Node.js</strong>, <strong>Express</strong>,
+            <strong>MongoDB</strong>, and <strong>Redis</strong>.
+        </p>
+        <p>Check out the <a href="YOUR_POSTMAN_COLLECTION_LINK" target="_blank">API documentation</a> for endpoint
+            details.</p>
+        <footer>
+            Developed by <strong>Shakti Priya</strong>
+            <div class="profile-link">
+                <!--<a href="https://github.com/shaktipriya13" target="_blank" class="github-icon">GH</a>-->
+                <a href="https://github.com/shaktipriya13/myBackend/tree/main" target="_blank"
+                    style="color: black;">Visit My GitHub Repo</a>
+
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
