@@ -12,6 +12,9 @@ import Redis from 'ioredis';
 dotenv.config();
 const app = express();
 
+// Serve static files from 'public' folder
+app.use(express.static('public'));
+
 // Initialize Redis client
 const redisClient = new Redis({
     host: config.redis.host,

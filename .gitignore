@@ -84,7 +84,7 @@ jest-debug.log
 
 yarn.lock
 pnpm-lock.yaml
-
+testing.md
 # Swagger or API docs (optional)
 swagger.json
 swagger.yaml
