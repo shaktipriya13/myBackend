@@ -161,5 +161,5 @@ Create a Postman environment with the following variables:
 - **Database** : MongoDB (Mongoose)
 - **Caching** : Redis (for GET endpoints and rate-limiting)
 - **File Uploads** : Multer
-- **Deployment** : Render/Railway/Fly.io, AWS EC2 (optional)
+- **Deployment** : Render
 - **CI/CD** : GitHub Actions
