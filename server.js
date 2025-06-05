@@ -61,3 +61,4 @@ app.listen(config.port, () => {
 export { redisClient };
 
 
+// Testing deployment on ec2 instance
