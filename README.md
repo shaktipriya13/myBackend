@@ -248,7 +248,7 @@ Create a Postman environment with the following variables:
 
 ### Render Deployment
 
-- **Platform**: Deployed on Render at [https://chapter-performance-api-shakti-priya.onrender.com/](https://chapter-performance-api-shakti-priya.onrender.com/) _(Placeholder link—replace with actual if applicable)_.
+- **Platform**: Deployed on Render at [https://chapter-performance-api-shakti-priya.onrender.com/](https://chapter-performance-api-shakti-priya.onrender.com/) 
 - **Cost**: Free tier used, no cost incurred.
 - **Setup**: Configured environment variables in Render dashboard, deployed via GitHub integration.
 
