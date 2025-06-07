@@ -1,5 +1,5 @@
 import Chapter from '../models/Chapter.model.js';
-import redis from '../config/redisClient.js';
+import redis from '../config/redis.js';
 import { cacheData, getCachedData, invalidateCache } from '../utils/cache.js';
 
 import fs from 'fs/promises';

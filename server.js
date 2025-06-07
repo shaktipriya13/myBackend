@@ -16,23 +16,23 @@ const app = express();
 app.use(express.static('public'));
 
 // Initialize Redis client
-const redisClient = new Redis({
+const redis = new Redis({
     host: config.redis.host,
     port: config.redis.port,
     password: config.redis.password,
 });
 
-redisClient.on('connect', async () => {
+redis.on('connect', async () => {
     console.log('Connected to Redis Cloud');
     try {
-        const pingResponse = await redisClient.ping();
+        const pingResponse = await redis.ping();
         console.log('Redis PING response:', pingResponse); // Should log "PONG"
     } catch (error) {
         console.error('Redis PING failed:', error);
     }
 });
 
-redisClient.on('error', (err) => {
+redis.on('error', (err) => {
     console.error('Redis connection error:', err);
 });
 
@@ -58,7 +58,7 @@ app.listen(config.port, () => {
     console.log(`Server running on port ${config.port}`);
 });
 
-export { redisClient };
+export { redis };
 
 
 // Testing deployment on ec2 instance
