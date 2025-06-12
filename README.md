@@ -1,8 +1,3 @@
-**📝 Assignment Details**
-
-- **Received On:** Tuesday, 3rd June 2025 at 7:13 PM
-- **Submitted On:** Thursday, 6th June 2025 at 3:30 AM
-
 # Chapter Performance API
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
