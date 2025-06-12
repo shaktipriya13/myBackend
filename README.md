@@ -95,7 +95,7 @@ chapter-performance-api/
 
 ### Authentication (for Admin Access)
 
-- **POST /api/v1/auth/register** _(if implemented, adjust based on your actual endpoint)_
+- **POST /api/v1/auth/register** 
   - Body: `{ "email": "admin@example.com", "password": "admin123", "role": "admin" }`
   - Returns: JWT token for admin access
     ```
