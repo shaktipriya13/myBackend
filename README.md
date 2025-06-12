@@ -105,7 +105,7 @@ chapter-performance-api/
     ```
   - Error: `400` if invalid data
     ```
-    { "error": "Email already exists" }
+    { "error": "Email do not exists" }
     ```
 
 ### Chapters
