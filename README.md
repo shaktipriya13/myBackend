@@ -253,7 +253,7 @@ Create a Postman environment with the following variables:
 ### AWS EC2 (Bonus)
 
 - **Platform**: Deployed on an AWS EC2 `t3.micro` instance in `ap-south-1` (Mumbai) region.
-- **URL**: `http://13.60.25:8000/api/v1/chapters` _(Updated to correct IP)_.
+- **URL**: `http://13.60.25:8000/api/v1/chapters`.
 - **Setup**:
   - Launched EC2 instance with Ubuntu 22.04 LTS.
   - Configured security groups for SSH (22) and API (8000).
