@@ -278,7 +278,7 @@ Create a Postman environment with the following variables:
   - Rate limiting to prevent abuse.
   - Input validation with Mongoose schemas for chapter uploads.
 - **Tools**:
-  - Used ESLint and Prettier for consistent code formatting _(add if applicable, or install these tools)_.
+  - Used ESLint and Prettier for consistent code formatting .
   - GitHub Actions for CI/CD pipeline.
 
 ## Challenges and Solutions
